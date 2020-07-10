@@ -1,0 +1,118 @@
+$gradient: linear-gradient(
+	180deg,
+	$transparent 11%,
+	0%,
+	$secondary 90%,
+	0%,
+	$transparent
+);
+$gradientmd: linear-gradient(
+	180deg,
+	$transparent 15%,
+	0%,
+	$secondary 80%,
+	0%,
+	$transparent
+);
+.lightpaper {
+	position: relative;
+	display: flex;
+	height: 520px;
+	background: linear-gradient(180deg, $primary 47%, 0%, $transparent);
+
+	@include respond-to(md) {
+		height: 480px;
+	}
+	&__before {
+		background: $gradient;
+
+		@include respond-to(md) {
+			background: $gradientmd;
+		}
+	}
+	&__main {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		width: 100%;
+		max-width: 1170px;
+		padding: 25px 0;
+		background: url("~@/assets/Symbol_Docs_sm.png") no-repeat 0 83%, $gradient;
+
+		@include respond-to(md) {
+			justify-content: flex-end;
+			background: url("~@/assets/Symbol_Docs.png") no-repeat 0 60%, $gradientmd;
+		}
+	}
+	&__img-block {
+		position: absolute;
+		top: 0;
+		left: 31.5%;
+
+		-webkit-filter: drop-shadow(-23px 63px 83px rgba(15, 28, 54, 0.51));
+		filter: drop-shadow(-23px 63px 83px rgba(15, 28, 54, 0.51));
+
+		@include respond-to(lg) {
+			left: 50%;
+		}
+	}
+	&__img {
+		display: block;
+		width: 100%;
+		min-width: 402px;
+		height: auto;
+	}
+	&__content {
+		position: relative;
+		margin-bottom: 57px;
+		padding: 0 30px;
+		// margin-bottom: 4%;
+
+		@include respond-to(xl) {
+			margin: 0;
+			padding: 0;
+		}
+
+		@include respond-to(lg) {
+			display: flex;
+			margin-bottom: 66px;
+		}
+	}
+	&__title {
+		font-weight: 900;
+		max-width: 150px;
+		letter-spacing: 0.64px;
+
+		@include respond-to(md) {
+			max-width: 200px;
+		}
+	}
+	&__text {
+		max-width: 200px;
+		margin-top: 33px;
+		letter-spacing: 0.4px;
+
+		@include respond-to(md) {
+			font-size: 24px;
+			line-height: 34px;
+			margin-top: 30px;
+		}
+
+		@include respond-to(lg) {
+			margin-top: 44px;
+			margin-left: 93px;
+			letter-spacing: 0.48px;
+		}
+	}
+	&__btn {
+		margin: 0 auto;
+		@include respond-to(md) {
+			margin-bottom: 6%;
+			margin-left: 8.3%;
+		}
+		@include respond-to(lg) {
+			margin-bottom: 3%;
+		}
+	}
+}

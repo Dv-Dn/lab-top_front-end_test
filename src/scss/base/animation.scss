@@ -1,0 +1,10 @@
+.before-enter {
+  transition: .5s ease-in;
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+  opacity: 0;
+}
+.enter {
+  transform: matrix(1, 0, 0, 1, 0, 0);
+  opacity: 1;
+}

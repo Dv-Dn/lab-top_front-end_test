@@ -1,0 +1,34 @@
+html {
+  font-family: 'Proxima Nova', sans-serif;
+}
+h2 {
+  font-family: 'Proxima Nova Black';
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: 1.1px;
+
+@include respond-to(md) {
+    font-size: 48px;
+  }
+}
+h3 {
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: .3px;
+@include respond-to(md) {
+    font-size: 32px;
+    letter-spacing: .63px;
+  }
+}
+p {
+  font-size: 16px;
+  font-weight: lighter;
+  line-height: 24px;
+  letter-spacing: .25px;
+}
+
+#app {
+  overflow: hidden;
+	background-color: $bg;
+	color: $white;
+}

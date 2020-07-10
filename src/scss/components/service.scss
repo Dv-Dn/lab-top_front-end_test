@@ -1,0 +1,73 @@
+.service {
+	position: relative;
+	padding: 88px 0 25px 0;
+	background-color: $primary;
+	background-image: url("~@/assets/icons/favicon_primary_white.svg");
+	background-repeat: no-repeat;
+	background-position: center -60px;
+	background-size: cover;
+	@include respond-to(md) {
+		padding: 133px 0 120px 0;
+		background-position: center center;
+		background-size: contain;
+	}
+
+	@include respond-to(hd) {
+		padding: 120px 0 120px 0;
+	}
+	&:before {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		content: "";
+		background-color: rgba($primary, 0.98);
+	}
+	&__grid {
+		display: grid;
+		max-width: 975px;
+		margin: 0 auto;
+		margin-top: 36px;
+
+		grid-template-columns: 1fr;
+		@include respond-to(sm) {
+			margin-top: 104px;
+
+			column-gap: 20px;
+			grid-template-columns: 1fr 1fr;
+		}
+
+		@include respond-to(md) {
+			column-gap: 10%;
+			row-gap: 100px;
+		}
+		row-gap: 42px;
+	}
+	&__title {
+		max-width: 230px;
+
+		@include respond-to(md) {
+			max-width: 360px;
+		}
+	}
+}
+.service-item {
+	&__title {
+		margin-top: 14px;
+		margin-bottom: 25px;
+
+		@include respond-to(md) {
+			margin-top: 16px;
+			margin-bottom: 40px;
+		}
+	}
+	&__text {
+		opacity: 0.4;
+
+		@include respond-to(md) {
+			font-size: 18px;
+			line-height: 28px;
+		}
+	}
+}

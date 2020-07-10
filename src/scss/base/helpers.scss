@@ -1,0 +1,10 @@
+.wrap {
+	@include min-max(320px, 1200px, 30px);
+
+	@include respond-to(lg) {
+		padding: 0 15px;
+	}
+}
+.spacer {
+	flex-grow: 1;
+}

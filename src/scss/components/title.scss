@@ -1,0 +1,33 @@
+.title {
+  &__symbol-block {
+    position: relative;
+    overflow: hidden;
+    width: 20px;
+    height: 20px;
+    margin-bottom: 18px;
+
+@include respond-to(md) {
+      width: 28px;
+      height: 28px;
+    }
+  }
+  &__symbol {
+    position: absolute;
+    top: 4px;
+    left: -6px;
+    width: 40px;
+    height: 9px;
+    transform: rotate(-28deg);
+    background-color: $secondary;
+
+@include respond-to(md) {
+      top: 8px;
+      left: -6px;
+      width: 40px;
+      height: 12px;
+    }
+  }
+  &__h2 {
+    text-transform: uppercase;
+  }
+}

@@ -1,0 +1,11 @@
+.product {
+	padding: 35px 0 80px 0;
+	color: $primary;
+	@include respond-to(md) {
+		padding: 70px 0;
+	}
+	&__title {
+		max-width: 520px;
+	
+	}
+}
